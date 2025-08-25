@@ -41,7 +41,7 @@ document.querySelector(".nxtBtn").addEventListener("click", () => {
 
 document.querySelector("#phase6 .nxtBtn").addEventListener("click", () => {
   // Hide Phase 6
-  document.getElementById("phase6").style.display = "flex";
+  document.getElementById("phase6").style.display = "none";
   
   // Show Phase 7 with romantic message
   document.getElementById("phase7").style.display = "flex";
@@ -66,53 +66,3 @@ function startHeartsAnimation() {
     setTimeout(() => heart.remove(), 5000);
   }, 300);
 }
-// Video error handling and management
-document.addEventListener('DOMContentLoaded', function() {
-    // Function to handle video loading
-    function setupVideo() {
-        const video = document.getElementById('birthdayVideo');
-        
-        if (video) {
-            // Reset the video source when phase changes
-            video.load();
-            
-            video.addEventListener('error', function() {
-                console.error('Video loading error:', video.error);
-                
-                // Try different extensions if available
-                const extensions = ['.mp4', '.webm', '.mov', '.avi'];
-                let currentSrc = video.querySelector('source').src;
-                let baseSrc = currentSrc.substring(0, currentSrc.lastIndexOf('.')) || currentSrc;
-                
-                // Remove current sources
-                while (video.firstChild) {
-                    video.removeChild(video.firstChild);
-                }
-                
-                // Add all extension options
-                extensions.forEach(ext => {
-                    const source = document.createElement('source');
-                    source.src = baseSrc + ext;
-                    source.type = 'video/' + ext.substring(1);
-                    video.appendChild(source);
-                });
-                
-                // Reload video
-                video.load();
-            });
-        }
-    }
-    
-    // Set up video when phase 6 is shown
-    const phase6Btn = document.querySelector('#phase5 .nxtBtn');
-    if (phase6Btn) {
-        phase6Btn.addEventListener('click', function() {
-            // Setup video after a short delay to ensure phase 6 is visible
-            setTimeout(setupVideo, 100);
-        });
-    }
-    
-    // Also set up video when the page loads if already on phase 6
-    setupVideo();
-});
-

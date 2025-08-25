@@ -141,17 +141,20 @@ h1 {
   transform: translateY(-3px);
 }
 
-<<<<<<< HEAD
-/* Video Container (Phase 6) */* Video Container (Phase 6) - FIXED */
-.phase6 {
-=======
-/* Video Container (Phase 6) */
+/* Video Container (Phase 6) - FIXED */
+#phase6 {
   display: none;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   width: 70%;
   max-width: 500px;
+}
+
+#phase6[style*="display: flex"] {
+  display: flex !important;
+  animation: fadeIn 1s ease-in-out both;
+}
 
 .video-container {
   width: 100%;
@@ -201,4 +204,3 @@ video {
 @keyframes floatUp {
   0% { transform: translateY(0) rotate(0); opacity: 1; }
   100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
-}
