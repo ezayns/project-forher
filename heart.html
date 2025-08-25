@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phased Experience</title>
+    <link rel="stylesheet" href="style00.css">
+</head>
+<body>
+    <!-- Phase 1: Welcome Heart -->
+    <div class="container phase" id="phase1">
+        <div class="heart"></div>
+        <h1>WELCOME</h1>
+    </div>
+
+    <!-- Phase 2: Login Form (Hidden Initially) -->
+    <div class="container phase" id="phase2" style="display: none;">
+        <h1>ENTER PASSWORD</h1>
+        <input type="password" id="passwordInput" placeholder="Type 'open' to proceed">
+        <button id="submitBtn">SUBMIT</button>
+        <p id="errorMsg" style="color: red; display: none;">Wrong password!</p>
+    </div>
+
+    <!-- Phase 3: Countdown (Hidden Initially) -->
+    <div class="container phase" id="phase3" style="display: none;">
+        <div class="heart"></div>
+        <h1 id="countdown">3</h1>
+    </div>
+
+    <div class="letter-box hidden" id="phase5">
+  <div class="letter">
+    <h2>Dear Ms Malanji❤️</h2>
+    <p>
+      Today, the world feels a little brighter, a little softer, and so much more magical… because it’s the day you came into it. ✨
+
+You’re more than just someone special—you’re the reason hearts feel lighter, smiles last longer, and life feels more meaningful. Every moment with you is a gift, and today I just want to remind you how deeply you’re cherished. 💕
+
+May this year wrap you in pure happiness, gentle peace, and endless love. May your dreams bloom into reality, and may you always feel the warmth of how loved you truly are. 🌸
+
+You deserve the universe and more, my love. Happy Birthday, my sweetest, my everything. ❤️🎂✨
+    </p>
+  </div>
+  <div class="button">
+    <button class="nxtBtn">Next Phase</button>
+  </div>
+</div>
+<!-- Phase 6: Video Container -->
+<div id="phase6" style="display: none;">
+  <div class="video-container">
+    <video controls autoplay width="100%">
+      <source src="baba.mp4" type="video/mp4">
+      Your browser doesn't support videos.
+    </video>
+  </div>
+  <div class="button">
+    <button class="nxtBtn">Next</button>
+  </div>
+</div>
+ 
+<!-- Phase 7: Final Message -->
+<div id="phase7" style="display: none;">
+  <div class="final-message">
+    <h2>Thank you for watching! ❤️</h2>
+    <p>And yes... I'm coming to see you tomorrow for a quick date! 😊</p>
+  </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

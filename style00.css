@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.heart {
+    height: 70px;
+    width: 70px;
+    background: red;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px red;
+    animation: heart 0.8s linear infinite;
+}
+
+@keyframes heart {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80% {
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100% {
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: red;
+    border-radius: 50px;
+}
+
+.heart:before {
+    top: -50%;
+    box-shadow: -10px -10px 90px red;
+}
+
+.heart:after {
+    right: -50%;
+    box-shadow: 10px 10px 90px red;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+}
+
+/* Phase 2: Login Form */
+#phase2 {
+  gap: 15px;
+}
+
+#phase2 input, #phase2 button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+#phase2 input {
+  background-color: #222;
+  color: white;
+}
+
+#phase2 button {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+#phase2 button:hover {
+  background-color: #ff6b6b;
+}
+
+/* Letter Box (Phase 5) */
+#phase5 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.letter {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  width: 70%;
+  max-width: 500px;
+  margin: auto;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.button{
+  display: flex;
+  margin-bottom: 10px;
+  gap: 20px;
+}
+.button .nxtBtn{
+  color: white;
+  background-color: red;
+  font-size: 0.7rem;
+  font-weight: 900;
+  padding: 14px 20px;
+  border-radius: 40px;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.button .nxtBtn:hover{
+  background: rgb(121, 3, 3);
+  transform: translateY(-3px);
+}
+
+<<<<<<< HEAD
+/* Video Container (Phase 6) */* Video Container (Phase 6) - FIXED */
+.phase6 {
+=======
+/* Video Container (Phase 6) */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 70%;
+  max-width: 500px;
+
+.video-container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+video {
+  border-radius: 8px;
+}
+
+/* Phase 7: Final Message */
+#phase7 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+  max-width: 500px;
+  animation: fadeIn 1s ease-out;
+}
+
+.final-message {
+  background: rgba(255, 182, 193, 0.2); /* Light pink */
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.final-message h2 {
+  color: #ff6b8b;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.final-message p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: white;
+}
+
+/* Optional: Floating hearts animation */
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0); opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
